@@ -10,6 +10,11 @@ function HomeScreen({ navigation }) {
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
       />
+      <Button
+        testID='button-counts'
+        title="Count"
+        onPress={() => navigation.navigate('Counts')}
+      />
     </View>
   );
 }
