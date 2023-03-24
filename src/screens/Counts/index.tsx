@@ -15,7 +15,7 @@ function CountsScreen({ navigation }) {
 
     return (
       <View style={styles.content}>
-        <View style={styles.card}>
+        <View style={styles.card} accessibilityLabel="Count_Days_Label">
             <TouchableOpacity
                 style={styles.button}
                 onPress={() => setCountDays(prev => prev + 1)}
@@ -25,7 +25,7 @@ function CountsScreen({ navigation }) {
             <Text style={styles.text}>{countDays}</Text>
         </View>
         
-        <View style={styles.card}>
+        <View style={styles.card} accessibilityLabel="Count_Cars_Label">
             <TouchableOpacity
                 style={styles.button}
                 onPress={() => setCountCars(prev => prev + 1)}
@@ -35,7 +35,7 @@ function CountsScreen({ navigation }) {
             <Text style={styles.text}>{countCars}</Text>
         </View>
 
-        <View style={styles.card}>  
+        <View style={styles.card} accessibilityLabel="Count_Heads_Label">  
             <TouchableOpacity
                 style={styles.button}
                 onPress={() => setCountHeads(prev => prev + 1)}
@@ -45,7 +45,7 @@ function CountsScreen({ navigation }) {
             <Text style={styles.text}>{countHeads}</Text>
         </View >
 
-        <View style={styles.card}>
+        <View style={styles.card} accessibilityLabel="Count_Tips_Label">
             <TouchableOpacity
                 style={styles.button}
                 onPress={() => setCountTips(prev => prev + 1)}

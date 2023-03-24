@@ -23,7 +23,7 @@ module.exports = {
     'android.debug': {
       type: 'android.apk',
       binaryPath: 'android/app/build/outputs/apk/debug/app-debug.apk',
-      build: 'cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug',
+      build: 'cd android && .\\gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug',
       reversePorts: [
         8081
       ]
@@ -66,12 +66,11 @@ module.exports = {
     'android.att.debug': {
       device: 'attached',
       app: 'android.debug'
-    },
-    /*'android.att.release': {
+    },/*
+    'android.att.release': {
       device: 'attached',
       app: 'android.release'
     },
-    
     'android.emu.debug': {
       device: 'emulator',
       app: 'android.debug'
