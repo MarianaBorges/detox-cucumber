@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, TouchableOpacity } from 'react-native';
+import { HomeButton } from '../../components/HomeButton';
 
 function HomeScreen({ navigation }) {
   return (
@@ -10,11 +11,27 @@ function HomeScreen({ navigation }) {
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
       />
-      <Button
+
+      < HomeButton
+        sectionTextId="counters"
+        title='Count'
         testID='button-counts'
-        title="Count"
         onPress={() => navigation.navigate('Counts')}
-      />
+        />
+
+      < HomeButton
+        sectionTextId="cities"
+        title='Cities'
+        testID='button-citites'
+        onPress={() => navigation.navigate('Cities')}
+        />
+
+      < HomeButton
+        sectionTextId="members"
+        title='Members'
+        testID='button-members'
+        onPress={() => navigation.navigate('Members')}
+       />
     </View>
   );
 }

@@ -5,6 +5,7 @@ import {
     StyleSheet, 
     TouchableOpacity 
 } from 'react-native';
+import { CountButton } from '../../components/CountButton';
 
 function CountsScreen({ navigation }) {
 
@@ -15,46 +16,33 @@ function CountsScreen({ navigation }) {
 
     return (
       <View style={styles.content}>
-        <View style={styles.card} accessibilityLabel="Count_Days_Label">
-            <TouchableOpacity
-                style={styles.button}
-                onPress={() => setCountDays(prev => prev + 1)}
-            >
-                <Text style={styles.text}>Count Days</Text> 
-            </TouchableOpacity>
-            <Text style={styles.text}>{countDays}</Text>
-        </View>
-        
-        <View style={styles.card} accessibilityLabel="Count_Cars_Label">
-            <TouchableOpacity
-                style={styles.button}
-                onPress={() => setCountCars(prev => prev + 1)}
-            >
-                <Text style={styles.text}>Count Cars</Text> 
-            </TouchableOpacity>
-            <Text style={styles.text}>{countCars}</Text>
-        </View>
+        <CountButton 
+            testID='Count_Days_id'
+            onPress={() => setCountDays(prev => prev + 1)}
+            title='Count Days'
+            count={countDays} 
+        />
 
-        <View style={styles.card} accessibilityLabel="Count_Heads_Label">  
-            <TouchableOpacity
-                style={styles.button}
-                onPress={() => setCountHeads(prev => prev + 1)}
-            >
-                <Text style={styles.text}>Count Heads</Text> 
-            </TouchableOpacity>
-            <Text style={styles.text}>{countHeads}</Text>
-        </View >
+        <CountButton 
+            testID='Count_Cars_id'
+            onPress={() => setCountCars(prev => prev + 1)}
+            title='Count Cars'
+            count={countCars} 
+        />
 
-        <View style={styles.card} accessibilityLabel="Count_Tips_Label">
-            <TouchableOpacity
-                style={styles.button}
-                onPress={() => setCountTips(prev => prev + 1)}
-            >
-                <Text style={styles.text}>Count Tips</Text> 
-            </TouchableOpacity>
-            <Text style={styles.text}>{countTips}</Text>
-        </View>
+        <CountButton 
+            testID='Count_Heads_id'
+            onPress={() => setCountHeads(prev => prev + 1)}
+            title='Count Heads'
+            count={countHeads} 
+        />
 
+        <CountButton 
+            testID='Count_Tips_id'
+            onPress={() => setCountTips(prev => prev + 1)}
+            title='Count Tips'
+            count={countTips} 
+        />
       </View>
     );
 }

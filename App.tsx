@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { MemberProvider } from './src/context/MemberContext'
 import Routes from './src/routes';
 
 export default function App() {
   return (
-    <Routes />
+    <MemberProvider>
+      <Routes />
+    </MemberProvider>
   );
 }
 
